@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Residencial Tradição — apartamentos à venda com arquitetura autoral. 40 anos de experiência, 850 empreendimentos. Agende sua visita." />
+  <meta name="theme-color" content="#101010" />
   <title>Residencial Tradição — Arquitetura & Incorporação</title>
 
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/style.css?v=200" />
   <link rel="shortcut icon" href="./assets/ico/arquitetura.png" type="image/x-icon" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,30 +15,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-<div class="page">
 
-  <!-- 1. NAVBAR -->
-  <header class="nav">
-    <a class="brand" href="#topo" aria-label="Residencial Tradição">
-      <span class="brand-mark">T</span>
-      <span class="brand-text">TRADIÇÃO<small>Arquitetura e Incorporação</small></span>
-    </a>
-    <nav class="links" aria-label="Navegação principal">
-      <a href="#topo" class="active">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#destaque">Lançamento</a>
-      <a href="#depoimento">Depoimentos</a>
-      <a href="#contato">Contato</a>
-    </nav>
-    <div class="nav-side">
-      <a href="#contato" class="pill">Agendar visita <span class="arrow">→</span></a>
-      <a class="icon-btn" href="tel:+5511918266394" aria-label="Telefone"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
-      <a class="icon-btn" href="https://wa.me/5511918266394" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.7-1.4 1.3-1.9 1.4-.5 0-1 .3-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .6-.3 1.2z"/></svg></a>
-      <a class="icon-btn" href="#contato" aria-label="E-mail"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
-    </div>
-  </header>
+<!-- CENA 3D INTERATIVA (fundo) -->
+<div id="bg3d" aria-hidden="true"></div>
+<!-- BARRA DE PROGRESSO DE LEITURA -->
+<div id="progress" aria-hidden="true"></div>
+
+<!-- 1. MENU FLUTUANTE (dock de vidro) -->
+<header class="nav">
+  <a class="brand" href="#topo" aria-label="Residencial Tradição">
+    <span class="brand-mark">T</span>
+    <span class="brand-text">TRADIÇÃO<small>Arquitetura e Incorporação</small></span>
+  </a>
+  <nav class="links" aria-label="Navegação principal">
+    <a href="#topo" class="active">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#destaque">Lançamento</a>
+    <a href="#depoimento">Depoimentos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <div class="nav-side">
+    <a href="#contato" class="pill">Agendar visita <span class="arrow">→</span></a>
+    <a class="icon-btn" href="tel:+5511918266394" aria-label="Telefone"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+    <a class="icon-btn" href="https://wa.me/5511918266394" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.7-1.4 1.3-1.9 1.4-.5 0 1 .3-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .6-.3 1.2z"/></svg></a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="page">
 
   <!-- 2. HERO -->
   <section class="hero" id="topo">
@@ -100,10 +109,34 @@
       <a href="#destaque" class="pill pill-sm">Explorar Projetos <span class="arrow">→</span></a>
     </div>
     <div class="project-row">
-      <img src="./assets/img/fachada-dia.jpg" alt="Fachada do residencial ao entardecer" />
-      <img src="./assets/img/image1.jpg" alt="Living integrado do decorado" />
-      <img src="./assets/img/proj-noite.jpg" alt="Área de lazer com piscina" />
-      <img src="./assets/img/dormitorio.jpg" alt="Suíte master do decorado" />
+      <article class="proj-card" data-maq="fachada">
+        <img src="./assets/img/fachada-dia.jpg" alt="Fachada do residencial ao entardecer" loading="lazy" decoding="async" />
+        <canvas class="proj-maq" aria-hidden="true"></canvas>
+        <div class="proj-meta"><strong>Fachada Tradição</strong><small>6 pavimentos · varandas</small></div>
+        <button class="maq-toggle" type="button" aria-label="Alternar entre maquete 3D e foto">foto</button>
+        <span class="maq-hint">arraste para girar</span>
+      </article>
+      <article class="proj-card" data-maq="living">
+        <img src="./assets/img/image1.jpg" alt="Living integrado do decorado" loading="lazy" decoding="async" />
+        <canvas class="proj-maq" aria-hidden="true"></canvas>
+        <div class="proj-meta"><strong>Living Integrado</strong><small>estar · jantar · cozinha</small></div>
+        <button class="maq-toggle" type="button" aria-label="Alternar entre maquete 3D e foto">foto</button>
+        <span class="maq-hint">arraste para girar</span>
+      </article>
+      <article class="proj-card" data-maq="piscina">
+        <img src="./assets/img/proj-noite.jpg" alt="Área de lazer com piscina" loading="lazy" decoding="async" />
+        <canvas class="proj-maq" aria-hidden="true"></canvas>
+        <div class="proj-meta"><strong>Piscina & Deck</strong><small>lazer · espaço gourmet</small></div>
+        <button class="maq-toggle" type="button" aria-label="Alternar entre maquete 3D e foto">foto</button>
+        <span class="maq-hint">arraste para girar</span>
+      </article>
+      <article class="proj-card" data-maq="suite">
+        <img src="./assets/img/dormitorio.jpg" alt="Suíte master do decorado" loading="lazy" decoding="async" />
+        <canvas class="proj-maq" aria-hidden="true"></canvas>
+        <div class="proj-meta"><strong>Suíte Master</strong><small>closet · varanda</small></div>
+        <button class="maq-toggle" type="button" aria-label="Alternar entre maquete 3D e foto">foto</button>
+        <span class="maq-hint">arraste para girar</span>
+      </article>
     </div>
   </section>
 
@@ -120,7 +153,7 @@
       </ul>
       <a href="#contato" class="pill">Ver Projeto <span class="arrow">→</span></a>
     </div>
-    <img class="featured-photo" src="./assets/img/image2.jpg" alt="Fachada do Residencial Tradição à noite" />
+    <img class="featured-photo" src="./assets/img/image2.jpg" alt="Fachada do Residencial Tradição à noite" loading="lazy" decoding="async" />
   </section>
 
   <!-- 7. DEPOIMENTO -->
@@ -139,7 +172,7 @@
       <div class="t-stars">★★★★★ <small><strong>4.9</strong> no Google</small></div>
       <div class="t-author">
         <img src="./assets/img/avatar.jpg" alt="Foto da cliente" />
-        <span><strong id="tName">Marina S.</strong><small>Moradora · Bloco A</small></span>
+        <span><strong id="tName">Marina S.</strong><small id="tRole">Moradora · Bloco A</small></span>
       </div>
     </div>
   </section>
@@ -162,7 +195,7 @@
       </form>
     </div>
     <div class="cta-photo">
-      <img src="./assets/img/image3.jpg" alt="Cozinha do apartamento decorado" />
+      <img src="./assets/img/image3.jpg" alt="Cozinha do apartamento decorado" loading="lazy" decoding="async" />
       <a href="#contato" class="pill pill-float">Agendar Visita <span class="arrow">→</span></a>
     </div>
   </section>
@@ -176,6 +209,7 @@
   </footer>
 
 </div>
-<script src="./js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
+<script src="./js/index.js?v=200"></script>
 </body>
 </html>
