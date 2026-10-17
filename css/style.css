@@ -124,6 +124,31 @@ h2 { font-family: var(--serif); font-weight: 500; line-height: 1.12; color: #fff
 .since { display: inline-block; margin-top: 14px; font-size: 0.68rem; letter-spacing: 0.3em; color: var(--champagne); border-top: 1px solid var(--line); padding-top: 12px; }
 .hero-cta { justify-self: center; margin-bottom: 8px; }
 
+/* --- giro 360° da casa (Three.js) --- */
+.hero360 {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  z-index: 0; display: block; touch-action: pan-y; cursor: grab;
+}
+.hero360:active { cursor: grabbing; }
+.hero::before {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(180deg, rgba(16,16,16,.5), rgba(16,16,16,.1) 42%, rgba(16,16,16,.8));
+}
+.hero-brand, .hero-sub, .hero-foot { position: relative; z-index: 2; }
+.hero-chips { z-index: 2; }
+.hero360-chip {
+  position: absolute; right: 44px; bottom: 150px; z-index: 2;
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 9px 15px; border-radius: 999px;
+  font-size: .64rem; letter-spacing: .16em; text-transform: uppercase; color: #f2ebe0;
+  background: rgba(16,16,16,.62); border: 1px solid rgba(255,255,255,.22);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  pointer-events: none; opacity: 0; transition: opacity .9s ease;
+}
+.hero360-chip.on { opacity: 1; }
+.hero360-chip.hide { opacity: 0; }
+.hero360-chip i { font-style: normal; font-size: .6rem; color: #b9b1a4; letter-spacing: .05em; text-transform: none; }
+
 /* ============ 3. SOBRE ============ */
 .about { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; padding: 84px 54px; align-items: center; }
 .about-text h2 { font-size: clamp(1.8rem, 3.4vw, 2.7rem); margin-bottom: 16px; }
@@ -241,6 +266,7 @@ h2 { font-family: var(--serif); font-weight: 500; line-height: 1.12; color: #fff
 @media (max-width: 860px) {
   .about, .featured, .testimonial, .cta { grid-template-columns: 1fr; }
   .hero-chips { display: none; }
+  .hero360-chip { top: 128px; left: auto; right: 16px; bottom: auto; }
   .hero-foot { grid-template-columns: 1fr; justify-items: start; }
   .hero-cta { justify-self: start; }
   .section-head { flex-direction: column; align-items: start; gap: 18px; }
